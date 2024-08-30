@@ -1,0 +1,43 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gym Website</title>
+    <link rel="stylesheet" href="{% static 'css/user_login.css'%}">
+</head>
+<body>
+    <img src="https://media.istockphoto.com/id/1346094138/photo/shot-of-an-empty-gym-ready-to-be-used.jpg?s=2048x2048&w=is&k=20&c=D4rl5Xoz8z0z2dnIkfurxyAYynIu5CFhnrAKEwmlK1Q=" alt="" style="position: relative;" height="700px" width="100%">
+
+    <div id="main" style="position: absolute;">
+        <div id="imag">
+            <img src="https://cdn.pixabay.com/photo/2020/11/03/13/04/yoga-5709767_640.png" alt=""  height="600px" width="600px" >
+        </div>
+
+        <div id="cont">
+            <div class="container">
+                <h2>Login</h2>
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn" onclick=" window.location.href='/user/signup.html'">Login</button>
+                </form>
+                <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+            </div>
+
+        </div>
+
+        
+    </div>
+    
+</body>
+</html>
+
+

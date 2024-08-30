@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ~Top Nav bar start */
+.top-nav{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.top-nav #a{
+    border: 2px solid black;
+    
+    display: flex;
+    
+
+}
+
+.top-nav #a ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+    padding: 20px;
+    color: whitesmoke;
+    margin-top: 70px;
+    
+
+}
+
+.top-nav #a ul li:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.top-nav #b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #91f321, #08fff3, #e766e7, #e23947);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+
+.top-nav #c{
+    border: 2px solid black;
+    
+    display: flex;
+    
+
+}
+
+.top-nav #c ul{
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+    padding: 20px;
+    color: whitesmoke;
+
+
+}
+
+.top-nav #c ul li:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.top-nav #c ul button{
+    background-color: whitesmoke;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    font-weight: bold;
+    transition: transform 0.3s;
+
+}
+
+.top-nav #c ul button:hover{
+    background-color: gray;
+    color: white;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+/* ~Top Nav bar end */
+
+/* ~Image Section  start */
+
+.ImgSection{
+    /* border: 2px solid red; */
+    height: 800px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#img1{
+    position: relative;
+}
+
+.incontent{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    /* color:#91f321; */
+    
+}
+.incontent pre{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    
+    font-size: 50px;
+    
+
+}
+
+.Butt button{
+    position: absolute;
+    height: 80px;
+    width: 300px;
+    top: 600px;
+    left: 400px;
+    background-color: whitesmoke;
+    border-radius: 40px;
+    font-weight: 800;
+    font-size: 20px;
+    color: #0a000a;
+    background-color: rgb(187, 177, 177);
+    box-shadow: 2px 2px 10px whitesmoke;
+}
+
+.Butt button:hover{
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.473);
+    color: green;
+    cursor: pointer;
+}
+
+.signup{
+    position: absolute;
+    top: 700px;
+    left: 370px;
+    color: rgb(255, 230, 3);
+}
+.signup a{
+    color: blue;
+}
+
+/* ~Image Section  end */
+
+/* ~Content Section  start */
+
+.content-Section{
+    /* border: 2px solid red; */
+    background-color: grey;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    align-items: center;
+    /* margin: 30px; */
+
+}
+
+.left{
+    /* border: 2px solid blue; */
+    height: 480px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    gap: 50px;
+}
+.left h1{
+    font-weight: 80px;
+    color: rgb(117, 9, 99);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.left pre{
+    font-size: 20px;
+    font-weight: 150px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 30px;
+    word-spacing: 5px;
+    color: rgba(0, 0, 0, 0.897);
+}
+
+.left button{
+    height: 50px;
+    width: 400px;
+    font-size: large;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,red,blue);
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 10px blue;
+    transition: transform 0.3s;
+}
+
+.left button:hover{
+    box-shadow: none;
+    cursor: pointer;
+    transform: translateY(-3px);
+    color: black;
+}
+
+.right{
+    /* border: 2px solid blue; */
+    height: 480px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img{
+    border-radius: 20px;
+}
+
+/* ~Content Section  end */
+
+/* ~footer Section  start */
+
+.foot{
+    /* border:  2px solid red; */
+    height: 400px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#a{
+    color: whitesmoke;
+    margin-top: -70px;
+}
+#b,#c{
+    color: whitesmoke
+
+}
+
+.foot p{
+    color: gray;
+}
+
+
+
+
+

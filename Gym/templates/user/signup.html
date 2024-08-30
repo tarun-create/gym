@@ -1,0 +1,57 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Gym Website</title>
+    <link rel="stylesheet" href="{% static 'css/user_signup.css' %}">
+</head>
+<body>
+    <img src="https://media.istockphoto.com/id/1346094138/photo/shot-of-an-empty-gym-ready-to-be-used.jpg?s=2048x2048&w=is&k=20&c=D4rl5Xoz8z0z2dnIkfurxyAYynIu5CFhnrAKEwmlK1Q=" alt="" style="position: relative;" height="700px" width="100%">
+
+    <div id="main" style="position: absolute;">
+        <div id="imag">
+            <img src="https://cdn.pixabay.com/photo/2024/02/22/11/25/woman-8589755_640.png" alt=""  height="600px" width="600px" >
+
+        </div>
+        <div id="cont">
+            <div class="container">
+                <h2>Sign Up</h2>
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Re Enter Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="UserType">UserType:</label>
+                        <select name="User Type" id="">
+                            <option value="UserType" disabled selected >UserType</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Trainer">Trainer</option>
+                            <option value="Client">Client</option>
+        
+                        </select>
+                    </div>
+                    <button type="submit" class="btn" onclick=" window.location.href='/user/login.html'">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
