@@ -24,14 +24,12 @@
 .top-nav #a ul{
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 30px;
     font-weight: bold;
     padding: 20px;
     color: whitesmoke;
-    margin-top: 70px;
-    
 
 }
 
@@ -158,7 +156,7 @@
     position: absolute;
     top: 700px;
     left: 370px;
-    color: rgb(235, 12, 12);
+    color: rgb(255, 230, 3);
 }
 .signup a{
     color: blue;

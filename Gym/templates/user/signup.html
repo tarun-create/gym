@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Gym Website</title>
     <link rel="stylesheet" href="{% static 'css/user_signup.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 <body>
     <img src="https://media.istockphoto.com/id/1346094138/photo/shot-of-an-empty-gym-ready-to-be-used.jpg?s=2048x2048&w=is&k=20&c=D4rl5Xoz8z0z2dnIkfurxyAYynIu5CFhnrAKEwmlK1Q=" alt="" style="position: relative;" height="700px" width="100%">
@@ -37,7 +39,7 @@
                     </div>
                     <div class="input-group">
                         <label for="UserType">UserType:</label>
-                        <select name="User Type" id="">
+                        <select name="User Type" id="utype">
                             <option value="UserType" disabled selected >UserType</option>
                             <option value="Admin">Admin</option>
                             <option value="Trainer">Trainer</option>
@@ -45,13 +47,36 @@
         
                         </select>
                     </div>
-                    <button type="submit" class="btn" onclick=" window.location.href='/user/login.html'">Sign Up</button>
+                    <button type="submit" class="btn" onclick="check();">Sign Up</button>
                 </form>
                 <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
             </div>
         </div>
         
     </div>
+
+    <script>
+        function check()
+        {
+           window.location.href='/user/login.html' 
+           var name = $('#name').val();
+           var mail = $('#email').val();
+           var password = $('#password').val();
+           var utype = $('#utype').val();
+           
+
+           $.ajax({
+            type: "POST",
+            url: "/user/create_user",
+            data: {"username": name, "email": mail, "pass": password, "utype": utype},
+            success: function(data)
+            {
+                window.location.replace("/user/view_user");
+            }
+            
+           });
+        }
+    </script>
     
 </body>
 </html>
