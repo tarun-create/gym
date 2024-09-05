@@ -1,4 +1,7 @@
+{% extends './index.html' %}
 {% load static%}
+{% csrf_token %}
+{% block body_block %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +22,7 @@
         </div>
         <div id="cont">
             <div class="container">
-                <h2>Sign Up</h2>
+                <h2>Create Form</h2>
                 <form action="#" method="post">
                     <div class="input-group">
                         <label for="name">Name:</label>
@@ -37,7 +40,7 @@
                         <label for="password">Re Enter Password:</label>
                         <input type="password" id="password" name="password" required>
                     </div>
-                    <div class="input-group">
+                    <!-- <div class="input-group">
                         <label for="UserType">UserType:</label>
                         <select name="User Type" id="utype">
                             <option value="UserType" disabled selected >UserType</option>
@@ -46,10 +49,10 @@
                             <option value="Client">Client</option>
         
                         </select>
-                    </div>
-                    <button type="submit" class="btn" onclick="check();">Sign Up</button>
+                    </div> -->
+                    <button type="submit" class="btn" onclick="check();">CREATE CLIENT</button>
+
                 </form>
-                <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
             </div>
         </div>
         
@@ -61,7 +64,7 @@
            var name = $('#name').val();
            var mail = $('#email').val();
            var password = $('#password').val();
-           var utype = $('#utype').val();
+           var utype = 'client';
            
 
            $.ajax({
@@ -70,7 +73,8 @@
             data: {"username": name, "email": mail, "pass": password, "utype": utype},
             success: function(data)
             {
-                window.location.replace("/user/view_user");
+                alert("client created succesfully")
+                window.location.replace("/admin");
             }
             
            });
@@ -79,3 +83,4 @@
     
 </body>
 </html>
+{% endblock%}

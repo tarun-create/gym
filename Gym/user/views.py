@@ -38,6 +38,15 @@ class view_user(TemplateView):
         context = { 'userdata': user_data}
         return context
     
+class view_useronly(TemplateView):
+    template_name = "view_signuponly.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user_data = user_signup.objects.all()
+        context = { 'userdata': user_data}
+        return context
+    
 
 class removereference(APIView):
      def post(self,request):

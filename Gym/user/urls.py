@@ -5,6 +5,8 @@ urlpatterns = [
     path("login/",views.login,name='login'),
     path("create_user", views.create_user.as_view(),name="create_user"),
     path("view_user", views.view_user.as_view(),name="view_user"),
+    path("view_useronly", views.view_useronly.as_view(),name="view_useronly"),
+
     path("login_user", views.login_user.as_view(),name="login_user"),
     path("view_login", views.view_login.as_view(),name="view_login"),
     path("removereference", views.removereference.as_view(),name="removereference"),

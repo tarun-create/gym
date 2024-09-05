@@ -23,7 +23,6 @@
                 <td>email</td>
                 <td>Password</td>
                 <td>User Type</td>
-                <td>DELETE</td>
 
             </tr>
         </thead>
@@ -34,28 +33,13 @@
                 <td>{{ obj.email }}</td>
                 <td>{{ obj.password }}</td>
                 <td>{{ obj.role }}</td>
-                <td><button onclick="deletesignup('{{ obj.user_name }}');">DELETE</button></td>
 
             </tr>
             {% endfor %}
         </tbody>
     </table>
 
-    <script>
-        function deletesignup(username){
-            $.ajax({
-                type: "POST",
-                url: "/user/removesignup",
-                data: {"user_name": username},
-                success: function(data)
-                {
-                   window.location.replace("/user/view_user");
-                }
-                       
-               });
-
-        }
-    </script>
+  
 
 </body>
 </html>
